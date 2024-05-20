@@ -1,0 +1,4 @@
+KAFKA_BOOTSTRAP_SERVERS = 'localhost:9092'
+KAFKA_TOPIC_IMPRESSIONS = 'ad_impressions'
+KAFKA_TOPIC_CLICKS = 'ad_clicks'
+KAFKA_TOPIC_BID_REQUESTS = 'bid_requests'

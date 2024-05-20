@@ -1,0 +1,45 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "kafka_server_brokertopicmetrics_messagesin_total",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "title": "Kafka Messages In",
+      "type": "graph"
+    },
+    {
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "spark_driver_blockmanager_memory_used_bytes",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "B"
+        }
+      ],
+      "title": "Spark Memory Usage",
+      "type": "graph"
+    }
+  ],
+  "title": "AdvertiseX Monitoring",
+  "uid": "advertisx-dashboard"
+}
